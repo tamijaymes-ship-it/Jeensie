@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>🐱 JEE Predictor · Pink Cat Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<div class="pink-bg"></div>
+<canvas id="bgCanvas"></canvas>
+<div class="floating-cat"><i class="fas fa-cat"></i> 🐱</div>
+<div class="floating-cat"><i class="fas fa-cat"></i> ✨</div>
+
+<div class="wrapper">
+  <div class="glass-card">
+    <h1><i class="fas fa-chart-line"></i> JEE Main 2026 · Pink Predictor</h1>
+    <div class="sub">Shift‑wise normalization | by Astha & Aditya (IIT Mandi) 🐾</div>
+
+    <label><i class="fas fa-calendar-alt"></i> Select Shift</label>
+    <select id="shiftSelect">
+      <option value="">-- Choose Shift --</option>
+      <option value="21S1">21 Jan Shift 1 (Moderate)</option>
+      <option value="21S2">21 Jan Shift 2 (Hard)</option>
+      <option value="22S1">22 Jan Shift 1 (Easy)</option>
+      <option value="22S2">22 Jan Shift 2 (Moderate)</option>
+      <option value="23S1">23 Jan Shift 1 (Easy+)</option>
+      <option value="23S2">23 Jan Shift 2 (Hard+)</option>
+      <option value="24S1">24 Jan Shift 1 (Moderate-Easy)</option>
+      <option value="24S2">24 Jan Shift 2 (Brutal)</option>
+      <option value="28S1">28 Jan Shift 1 (Very Easy)</option>
+      <option value="28S2">28 Jan Shift 2 (Moderate)</option>
+    </select>
+
+    <label><i class="fas fa-pen-fancy"></i> Expected Marks (0–300)</label>
+    <input type="number" id="marksInput" min="0" max="300" step="1" placeholder="e.g., 178" />
+
+    <button id="predictBtn" class="btn-glow"><i class="fas fa-microchip"></i> Predict Percentile 🐱</button>
+
+    <div id="resultArea" class="result-row" style="display: none;">
+      <div class="result-item"><i class="fas fa-percent"></i> Percentile<br><span class="result-value" id="percentileVal">--</span></div>
+      <div class="result-item"><i class="fas fa-trophy"></i> Expected AIR<br><span class="result-value" id="rankVal">--</span></div>
+    </div>
+    <div class="info-note"><i class="fas fa-heart"></i> Based on 15-16 lakh candidates & shift‑specific curves • meow magic ✨</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
